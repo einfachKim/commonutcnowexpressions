@@ -1,5 +1,11 @@
 # UTCNow Expression Guide for Power Automate and Logic Apps
 
+## How to Get Started
+
+To make it easier for you to try out these expressions, we’ve provided a file called `compose_example`. You can copy and paste the code from this file directly into your **Flow editor** and see the examples in action within a cloud flow. This will allow you to further explore and use them in your own automations.
+
+![Image of Flow Example](https://imgur.com/LZM1MzO)
+
 ## Introduction: Understanding Date and Time Formatting in Power Automate
 
 When working with automation in Power Automate or Azure Logic Apps, dealing with date and time formats is a common requirement. Whether you're processing tasks based on current dates, logging actions with timestamps, or manipulating schedules, it's essential to know how to handle date and time formatting effectively. One of the most widely used standards for representing dates and times is **ISO 8601**.
