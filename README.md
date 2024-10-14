@@ -4,7 +4,7 @@
 
 To make it easier for you to try out these expressions, we’ve provided a file called `compose_example`. You can copy and paste the code from this file directly into your **Flow editor** and see the examples in action within a cloud flow. This will allow you to further explore and use them in your own automations.
 
-![Image of Flow Example](https://imgur.com/LZM1MzO)
+![Flow Example](https://imgur.com/LZM1MzO.png)
 
 ## Introduction: Understanding Date and Time Formatting in Power Automate
 
