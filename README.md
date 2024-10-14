@@ -9,41 +9,6 @@ If the Compose action does not appear in your Clipboard section make sure to pre
 
 ![Flow Example](https://imgur.com/LZM1MzO.png)
 
-## Introduction: Understanding Date and Time Formatting in Power Automate
-
-When working with automation in Power Automate or Azure Logic Apps, dealing with date and time formats is a common requirement. Whether you're processing tasks based on current dates, logging actions with timestamps, or manipulating schedules, it's essential to know how to handle date and time formatting effectively. One of the most widely used standards for representing dates and times is **ISO 8601**.
-
-In this article, we’ll explore how the `utcNow()` expression works in Power Automate and how to use it to format dates and times according to different needs. We’ll also provide a detailed table of commonly used date formats and expressions, along with instructions on calculating the **ISO week number**, both in German and English.
-
----
-
-## Background: The ISO 8601 Date and Time Standard
-
-The **ISO 8601** standard defines an internationally accepted way to represent dates and times. It provides a framework for representing times based on UTC (Coordinated Universal Time) and ensures consistency in handling time across different systems and time zones.
-
-The ISO 8601 format is particularly useful in automation workflows, such as Power Automate, because it is unambiguous and helps systems to interpret dates and times consistently regardless of location or language.
-
-### Examples of ISO 8601 date formats:
-- Full date and time (with timezone): `2024-10-14T13:45:30Z`
-- Date only: `2024-10-14`
-- Time only: `13:45:30`
-
-Power Automate supports ISO 8601 date formats by using the `utcNow()` function, which allows you to generate the current date and time in UTC and format it according to your specific needs.
-
----
-
-## Working with the `utcNow()` Expression in Power Automate
-
-The `utcNow()` function in Power Automate is used to get the current date and time in **UTC** format. You can customize how the date and time are displayed by passing a **format string** to the function. The format string defines how the output will appear—whether as a date, time, or a combination of both.
-
-### Basic usage of `utcNow()`:
-- `utcNow()` — Returns the current date and time in UTC.
-- `utcNow('yyyy-MM-dd')` — Returns the current date in ISO 8601 format.
-- `utcNow('HH:mm:ss')` — Returns the current time.
-
-Additionally, Power Automate allows for more advanced date and time manipulations, such as calculating the current week of the year. This is especially useful for business logic, scheduling, or logging purposes.
-
----
 
 ## Common Date Formats Using `utcNow()`
 
@@ -78,13 +43,39 @@ Here is a comprehensive list of common date and time formats you can use in Powe
 | **Universal Sortable DateTime** | `@{utcNow('u')}`                              | `2024-10-14 13:45:30Z`    |
 | **ISO Week Number Calculation** | `@{div(add(dayofyear(addDays(subtractFromTime(utcNow(), if(equals(dayofweek(utcNow()), 0), 6, sub(dayofweek(utcNow()), 1)), 'Day'), 3)), 6), 7)}` | `42` |
 
+
+## Understanding Date and Time Formatting in Power Automate
+
+When working with automation in Power Automate or Azure Logic Apps, dealing with date and time formats is a common requirement. Whether you're processing tasks based on current dates, logging actions with timestamps, or manipulating schedules, it's essential to know how to handle date and time formatting effectively. One of the most widely used standards for representing dates and times is **ISO 8601**.
+
+In this article, we’ll explore how the `utcNow()` expression works in Power Automate and how to use it to format dates and times according to different needs. We’ll also provide a detailed table of commonly used date formats and expressions, along with instructions on calculating the **ISO week number**, both in German and English.
+
 ---
 
-## Calculating the ISO Week Number in Power Automate
+## Background: The ISO 8601 Date and Time Standard
 
-In some use cases, knowing the **ISO week number** (the week of the year) is crucial. Power Automate does not directly support the ISO week number through the `utcNow()` expression, but you can calculate it using a custom formula.
+The **ISO 8601** standard defines an internationally accepted way to represent dates and times. It provides a framework for representing times based on UTC (Coordinated Universal Time) and ensures consistency in handling time across different systems and time zones.
 
-The following expression calculates the correct ISO week number:
+The ISO 8601 format is particularly useful in automation workflows, such as Power Automate, because it is unambiguous and helps systems to interpret dates and times consistently regardless of location or language.
 
-```json
-@{div(add(dayofyear(addDays(subtractFromTime(utcNow(), if(equals(dayofweek(utcNow()), 0), 6, sub(dayofweek(utcNow()), 1)), 'Day'), 3)), 6), 7)}
+### Examples of ISO 8601 date formats:
+- Full date and time (with timezone): `2024-10-14T13:45:30Z`
+- Date only: `2024-10-14`
+- Time only: `13:45:30`
+
+Power Automate supports ISO 8601 date formats by using the `utcNow()` function, which allows you to generate the current date and time in UTC and format it according to your specific needs.
+
+---
+
+## Working with the `utcNow()` Expression in Power Automate
+
+The `utcNow()` function in Power Automate is used to get the current date and time in **UTC** format. You can customize how the date and time are displayed by passing a **format string** to the function. The format string defines how the output will appear—whether as a date, time, or a combination of both.
+
+### Basic usage of `utcNow()`:
+- `utcNow()` — Returns the current date and time in UTC.
+- `utcNow('yyyy-MM-dd')` — Returns the current date in ISO 8601 format.
+- `utcNow('HH:mm:ss')` — Returns the current time.
+
+Additionally, Power Automate allows for more advanced date and time manipulations, such as calculating the current week of the year. This is especially useful for business logic, scheduling, or logging purposes.
+
+---
