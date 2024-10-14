@@ -2,7 +2,8 @@
 
 ## How to Get Started
 
-To make it easier for you to try out these expressions, we’ve provided a file called `compose_example`. You can copy and paste the code from this file directly into your **Flow editor** and see the examples in action within a cloud flow. This will allow you to further explore and use them in your own automations.
+To make it easier for you to try out these expressions, we’ve provided a file called [`compose_example.json`](https://github.com/einfachKim/commonutcnowexpressions/blob/main/compose_example.json). You can copy and paste the code from this file directly into your **Flow editor** and see the examples in action within a cloud flow. This will allow you to further explore and use them in your own automations.
+
 
 ![Flow Example](https://imgur.com/LZM1MzO.png)
 
